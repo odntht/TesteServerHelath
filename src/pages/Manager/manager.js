@@ -1,5 +1,5 @@
 function Manager() {
-  return <></>;
+  return <>Manager</>;
 }
 
 export default Manager;
