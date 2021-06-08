@@ -25,6 +25,7 @@ function Login() {
       >
         {({ values, handleChange }) => (
           <Form
+            autoComplete="off"
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -36,24 +37,30 @@ function Login() {
             }}
           >
             <TextField
-              placeholder="E-mail"
               name="email"
               value={values.email}
               onChange={handleChange}
               variant="outlined"
               margin="dense"
-              required
               type="email"
               autoFocus={true}
+              label="E-mail"
+              required
+              style={{
+                backgroundColor: 'rgb(220,220,220)',
+              }}
             />
             <TextField
-              placeholder="Senha"
               name="senha"
               value={values.senha}
               onChange={handleChange}
               variant="outlined"
               margin="dense"
               type="password"
+              label="Senha"
+              style={{
+                backgroundColor: 'rgb(220,220,220)',
+              }}
               required
             />
             <Button type="submit" variant="contained" color="primary">
